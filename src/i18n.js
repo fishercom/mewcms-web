@@ -193,15 +193,15 @@ export const translations = {
     demoCardGhTitle: "Free Open Source Repository",
     demoCardGhDesc: "Inspect the full Laravel 12 + Inertia.js 2 + React 19 codebase, clone the repository, or contribute on GitHub.",
     demoCardGhBtn: "⭐ Star & Fork on GitHub",
-    deepsoftBadge: "Crafted by DeepSoft (Non-Profit)",
-    deepsoftDesc: "A non-profit open-source initiative developed with passion by DeepSoft to deliver an agile, modern, and bloat-free CMS to the community.",
+    deepsoftBadge: 'Crafted by <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: var(--color-cyan); text-decoration: underline;">deepsoft.lat</a> (Non-Profit)',
+    deepsoftDesc: 'A non-profit open-source initiative developed with passion by <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: var(--color-cyan); text-decoration: underline;">deepsoft.lat</a> to deliver an agile, modern, and bloat-free CMS to the community.',
     licenseMit: "MIT License (100% Free & Open Source)",
 
     // Footer
-    footerDesc: "MewCMS is a next-generation high performance Content Management System built with Laravel 12, Inertia.js 2, React 19, and Tailwind CSS v4. Developed with non-profit dedication by DeepSoft.",
+    footerDesc: 'MewCMS is a next-generation high performance Content Management System built with Laravel 12, Inertia.js 2, React 19, and Tailwind CSS v4. Developed with non-profit dedication by <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: var(--color-cyan); text-decoration: underline;">deepsoft.lat</a>.',
     footerLinksTitle: "Navigation",
     footerLegalTitle: "Open Source & Architecture",
-    footerCopy: "© 2026 DeepSoft & MewCMS Contributors. Released under the MIT License."
+    footerCopy: '© 2026 <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: none; font-weight: 600;">deepsoft.lat</a> & MewCMS Contributors. Released under the MIT License.'
   },
   es: {
     // Nav
@@ -397,14 +397,14 @@ export const translations = {
     demoCardGhTitle: "Repositorio Libre & Open Source",
     demoCardGhDesc: "Inspecciona el código fuente en Laravel 12 + Inertia.js 2 + React 19, clona el repositorio o contribuye en GitHub.",
     demoCardGhBtn: "⭐ Ver Repositorio en GitHub",
-    deepsoftBadge: "Desarrollado por DeepSoft (Sin Fines de Lucro)",
-    deepsoftDesc: "Una iniciativa de código abierto sin fines de lucro desarrollada con pasión por DeepSoft para brindar a la comunidad un CMS ágil, moderno y libre de bloat.",
+    deepsoftBadge: 'Desarrollado por <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: var(--color-cyan); text-decoration: underline;">deepsoft.lat</a> (Sin Fines de Lucro)',
+    deepsoftDesc: 'Una iniciativa de código abierto sin fines de lucro desarrollada con pasión por <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: var(--color-cyan); text-decoration: underline;">deepsoft.lat</a> para brindar a la comunidad un CMS ágil, moderno y libre de bloat.',
     licenseMit: "Licencia MIT (100% Libre y Código Abierto)",
 
     // Footer
-    footerDesc: "MewCMS es un sistema gestor de contenidos de próxima generación y alto rendimiento creado con Laravel 12, Inertia.js 2, React 19 y Tailwind CSS v4. Desarrollado con dedicación sin fines de lucro por DeepSoft.",
+    footerDesc: 'MewCMS es un sistema gestor de contenidos de próxima generación y alto rendimiento creado con Laravel 12, Inertia.js 2, React 19 y Tailwind CSS v4. Desarrollado con dedicación sin fines de lucro por <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: var(--color-cyan); text-decoration: underline;">deepsoft.lat</a>.',
     footerLinksTitle: "Navegación",
     footerLegalTitle: "Código Abierto & Arquitectura",
-    footerCopy: "© 2026 DeepSoft y Colaboradores de MewCMS. Publicado bajo Licencia MIT."
+    footerCopy: '© 2026 <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: none; font-weight: 600;">deepsoft.lat</a> y Colaboradores de MewCMS. Publicado bajo Licencia MIT.'
   }
 };

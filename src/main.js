@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   applyLanguage(currentLang);
   setupInteractiveStudio();
   setupCodeShowcase();
+  setupSmoothNavigation();
   renderSchemaPreview();
   renderLivePreview();
 });
@@ -385,6 +386,29 @@ function setupCodeShowcase() {
           filenameEl.textContent = mode === 'mew'
             ? 'app/Http/Controllers/Admin/ArticleController.php'
             : 'wp-content/themes/legacy-theme/functions.php';
+        }
+      }
+    });
+  });
+}
+
+// Snappy hardware-accelerated smooth navigation for in-page anchors
+function setupSmoothNavigation() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const navHeight = 76;
+        const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight;
+        window.scrollTo({
+          top: targetPos,
+          behavior: 'smooth'
+        });
+        if (window.history && window.history.pushState) {
+          window.history.pushState(null, null, targetId);
         }
       }
     });

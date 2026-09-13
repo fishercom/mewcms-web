@@ -1,12 +1,17 @@
 export const translations = {
   en: {
+    // Document Meta
+    docTitle: "MewCMS 🐾 The Feline-Fast CMS for Modern Builders",
+    metaDesc: "MewCMS is a high-performance Content Management System built with Laravel 12, Inertia.js 2, React 19, TipTap, and Tailwind CSS. Unmatched speed, zero plugin bloat, and pure agility.",
+
     // Nav
     navFeatures: "Features",
     navStudio: "Content Studio",
     navComparison: "vs Competitors",
     navBenchmarks: "Benchmarks",
     navArchitecture: "Architecture",
-    navTryDemo: "Explore Demo",
+    navDemo: "🚀 Demo & Repo",
+    navTryDemo: "Live Demo",
 
     // Hero
     heroBadge: "🐾 The Feline-Fast CMS for Modern Builders",
@@ -16,13 +21,15 @@ export const translations = {
     heroCtaPrimary: "Try Interactive Studio",
     heroCtaSecondary: "Compare vs WordPress",
     heroMetricTtfb: "Time to First Byte",
-    heroMetricTtfbVal: "< 38ms",
+    heroMetricTtfbVal: "&lt; 38ms",
     heroMetricPlugins: "Third-party Plugins Needed",
     heroMetricPluginsVal: "0 Bloat",
     heroMetricLighthouse: "Lighthouse Score",
     heroMetricLighthouseVal: "100/100",
     heroMetricTypeSafe: "Type-safe Pipeline",
     heroMetricTypeSafeVal: "End-to-End",
+    heroPillLeft: "🐾 Feline Agility Engine • Live Active",
+    heroPillRight: "⚡ Sub-35ms TTFB • 0 Vulnerabilities",
 
     // Brand Lore
     brandTitle: "The Spirit of MewCMS",
@@ -49,6 +56,10 @@ export const translations = {
     editorCatLabel: "Taxonomy (Category)",
     editorTagsLabel: "Tags",
     editorContentLabel: "Rich WYSIWYG Content (TipTap)",
+    catArchitecture: "Architecture & DevOps",
+    catFrontend: "Frontend & React 19",
+    catTutorials: "Tutorials & Guides",
+    catCaseStudies: "Case Studies",
     editorBtnBold: "Bold",
     editorBtnItalic: "Italic",
     editorBtnH2: "H2 Heading",
@@ -58,6 +69,7 @@ export const translations = {
     editorStatusDraft: "Draft",
     editorStatusPublished: "Published",
     editorStatusLabel: "Status:",
+    editorSsrStatus: "Active (Vite 6)",
 
     // Studio: Schema Tab
     schemaHeading: "Visual Dynamic Schema & Post Type Builder",
@@ -65,6 +77,13 @@ export const translations = {
     schemaFieldTitle: "Field Name",
     schemaFieldType: "Field Type",
     schemaFieldAction: "Action",
+    schemaFieldPlaceholder: "Field name (e.g. author_bio)",
+    schemaTypeString: "Text String",
+    schemaTypeRichText: "RichText (TipTap)",
+    schemaTypeMedia: "Media File",
+    schemaTypeRelation: "Relation (FK)",
+    schemaTypeBoolean: "Boolean Flag",
+    schemaTypeJson: "JSON Metadata",
     schemaBtnAddField: "+ Add Custom Field",
     schemaPreviewTitle: "Generated Schema Blueprint (JSON)",
 
@@ -73,6 +92,7 @@ export const translations = {
     previewPublishedBy: "Published by Sarah Jenkins",
     previewReadTime: "4 min read",
     previewLikes: "248 purrs",
+    previewRenderedWith: "Rendered with Inertia.js 2 + React 19 Frontend",
 
     // Features Section
     featuresBadge: "Engineered For Speed & Control",
@@ -101,74 +121,74 @@ export const translations = {
     compColStrapi: "Strapi (Headless)",
     compColGhost: "Ghost",
 
-    compRow1Title: "Tech Architecture",
+    compRow1Title: "Core Tech Architecture",
     compRow1Mew: "Laravel 12 + Inertia 2 + React 19",
-    compRow1Wp: "Legacy PHP 7/8 (spaghetti codebase)",
-    compRow1Strapi: "Node.js (Headless API only)",
+    compRow1Wp: "Legacy PHP 7/8 (Spaghetti Code)",
+    compRow1Strapi: "Node.js (Headless API Only)",
     compRow1Ghost: "Node.js (Handlebars/API)",
 
-    compRow2Title: "Database Structure",
-    compRow2Mew: "Clean relational indexed tables & FKs",
-    compRow2Wp: "Unindexed wp_postmeta EAV bottleneck",
-    compRow2Strapi: "Relational / Document",
-    compRow2Ghost: "Relational (Blog-focused)",
+    compRow2Title: "Database Integrity",
+    compRow2Mew: "Clean Relational Tables, True FKs & Indexes",
+    compRow2Wp: "Bottlenecked in wp_postmeta EAV table",
+    compRow2Strapi: "Relational / Document-based",
+    compRow2Ghost: "Relational (Blogging focused)",
 
-    compRow3Title: "Plugin Risk & Vulnerabilities",
-    compRow3Mew: "0 plugins needed (all native)",
-    compRow3Wp: "Over 90% of all CMS security breaches",
-    compRow3Strapi: "NPM ecosystem dependencies",
+    compRow3Title: "Plugin Vulnerability Risk",
+    compRow3Mew: "0 Plugins Needed (All Core-Engineered)",
+    compRow3Wp: "90%+ of all WordPress security breaches",
+    compRow3Strapi: "NPM dependency sprawl",
     compRow3Ghost: "Limited plugin ecosystem",
 
-    compRow4Title: "Average TTFB (Server Response)",
-    compRow4Mew: "⚡ < 38ms",
+    compRow4Title: "Average Response Time (TTFB)",
+    compRow4Mew: "⚡ &lt; 38ms",
     compRow4Wp: "🐢 850ms - 2,400ms",
-    compRow4Strapi: "⚠️ 250ms - 600ms (2 hops)",
+    compRow4Strapi: "⚠️ 250ms - 600ms (Two hops)",
     compRow4Ghost: "⚡ 120ms - 300ms",
 
-    compRow5Title: "Authoring Experience",
+    compRow5Title: "Content Authoring Experience",
     compRow5Mew: "TipTap WYSIWYG + QuickMediaDrawer",
-    compRow5Wp: "Laggy Gutenberg Block Editor",
+    compRow5Wp: "Clunky & Bloated Gutenberg Editor",
     compRow5Strapi: "Basic Markdown / Separate Frontend",
     compRow5Ghost: "Clean Minimal Editor",
 
-    compRow6Title: "Deployment & Maintenance",
-    compRow6Mew: "Single deployment, atomic updates",
-    compRow6Wp: "High risk of plugin update crashes",
+    compRow6Title: "Deployment & Operations",
+    compRow6Mew: "Atomic single-repo deployment",
+    compRow6Wp: "Fragile plugin update dependencies",
     compRow6Strapi: "Requires 2 repos + separate hosting",
-    compRow6Ghost: "Single or cloud hosted",
+    compRow6Ghost: "Monolith or Ghost(Pro) PaaS",
 
     compRow7Title: "Multi-Language Support",
-    compRow7Mew: "Native database core (Zero cost)",
+    compRow7Mew: "Native Relational Tables (Zero Fee)",
     compRow7Wp: "Paid plugins (WPML/Polylang conflicts)",
-    compRow7Strapi: "Plugin required",
+    compRow7Strapi: "Requires additional plugin",
     compRow7Ghost: "Not natively supported",
 
-    compRow8Title: "Drag & Drop Navigation Builder",
-    compRow8Mew: "Built-in visual tree with auto-routing",
-    compRow8Wp: "Clunky legacy interface",
-    compRow8Strapi: "Must build from scratch in frontend",
+    compRow8Title: "Drag & Drop Menu Engine",
+    compRow8Mew: "Visual nested tree with dynamic route binding",
+    compRow8Wp: "Outdated, rigid legacy UI",
+    compRow8Strapi: "Must be coded by hand in frontend",
     compRow8Ghost: "Simple flat link list",
 
     // Benchmarks Section
-    benchBadge: "Telemetry & Performance",
-    benchTitle: "Measurable Architectural Superiority",
+    benchBadge: "Real Performance Telemetry",
+    benchTitle: "Demonstrable Architectural Superiority",
     benchSubtitle: "Benchmarks conducted on identical 2 vCPU / 4GB RAM cloud instances with 50,000 articles.",
     benchCard1Title: "Time to First Byte (TTFB)",
     benchCard1Mew: "34 ms",
     benchCard1Wp: "920 ms",
     benchCard1Unit: "Lower is better",
-    benchCard2Title: "DB Queries Per Article Page",
+    benchCard2Title: "SQL Queries Per Article Page",
     benchCard2Mew: "3 Queries",
     benchCard2Wp: "54 Queries",
     benchCard2Unit: "Lower is better",
-    benchCard3Title: "Memory Footprint Per Request",
+    benchCard3Title: "Memory Consumption Per Request",
     benchCard3Mew: "14 MB",
     benchCard3Wp: "118 MB",
     benchCard3Unit: "Lower is better",
-    benchCard4Title: "Security Vulnerability Index",
+    benchCard4Title: "Known Vulnerability Index",
     benchCard4Mew: "0 CVEs",
     benchCard4Wp: "4,200+ Known CVEs",
-    benchCard4Unit: "Plugin ecosystem risk",
+    benchCard4Unit: "Third-party plugin risk",
 
     // Code Section
     codeBadge: "Developer Delight",
@@ -181,7 +201,7 @@ export const translations = {
     ctaTitle: "Ready to unleash feline agility in your content workflow?",
     ctaSubtitle: "Experience the next evolution of web publishing. Fast, secure, and delightfully maintainable.",
     ctaBtnStar: "Star on GitHub",
-    ctaBtnDemo: "Run Local Environment",
+    ctaBtnDemo: "Launch Demo on Render",
 
     // Live Demo & Open Source Section
     demoSectionBadge: "Cloud Demo & Open Source",
@@ -201,16 +221,25 @@ export const translations = {
     footerDesc: 'MewCMS is a next-generation high performance Content Management System built with Laravel 12, Inertia.js 2, React 19, and Tailwind CSS v4. Developed with non-profit dedication by <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: var(--color-cyan); text-decoration: underline;">deepsoft.lat</a>.',
     footerLinksTitle: "Navigation",
     footerLegalTitle: "Open Source & Architecture",
+    footerDevelopedBy: "Developed by deepsoft.lat",
+    footerLicenseMit: "MIT Open Source License",
+    footerOpenSource: 'MIT License • <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: var(--color-emerald); text-decoration: none; font-weight: 600;">deepsoft.lat</a> Open Source',
+    footerPurr: "🐾 Purring Performance",
     footerCopy: '© 2026 <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: none; font-weight: 600;">deepsoft.lat</a> & MewCMS Contributors. Released under the MIT License.'
   },
   es: {
+    // Document Meta
+    docTitle: "MewCMS 🐾 El CMS con Agilidad Felina para Creadores Modernos",
+    metaDesc: "MewCMS es un sistema gestor de contenidos de alto rendimiento creado con Laravel 12, Inertia.js 2, React 19, TipTap y Tailwind CSS. Velocidad inigualable, cero sobrecarga de plugins y pura agilidad.",
+
     // Nav
     navFeatures: "Características",
     navStudio: "Estudio de Contenido",
     navComparison: "vs Competidores",
     navBenchmarks: "Rendimiento",
     navArchitecture: "Arquitectura",
-    navTryDemo: "Probar Demo",
+    navDemo: "🚀 Demo & Repo",
+    navTryDemo: "Demo en Vivo",
 
     // Hero
     heroBadge: "🐾 CMS con Agilidad Felina para Creadores Modernos",
@@ -220,13 +249,15 @@ export const translations = {
     heroCtaPrimary: "Probar Estudio Interactivo",
     heroCtaSecondary: "Comparar vs WordPress",
     heroMetricTtfb: "Tiempo de Respuesta (TTFB)",
-    heroMetricTtfbVal: "< 38ms",
+    heroMetricTtfbVal: "&lt; 38ms",
     heroMetricPlugins: "Plugins Externos Requeridos",
     heroMetricPluginsVal: "0 Bloat",
     heroMetricLighthouse: "Puntaje Google Lighthouse",
     heroMetricLighthouseVal: "100/100",
     heroMetricTypeSafe: "Seguridad de Tipos",
     heroMetricTypeSafeVal: "End-to-End",
+    heroPillLeft: "🐾 Motor de Agilidad Felina • En Vivo",
+    heroPillRight: "⚡ TTFB Sub-35ms • 0 Vulnerabilidades",
 
     // Brand Lore
     brandTitle: "El Espíritu de MewCMS",
@@ -253,6 +284,10 @@ export const translations = {
     editorCatLabel: "Taxonomía (Categoría)",
     editorTagsLabel: "Etiquetas (Tags)",
     editorContentLabel: "Contenido Enriquecido WYSIWYG (TipTap)",
+    catArchitecture: "Arquitectura & DevOps",
+    catFrontend: "Frontend & React 19",
+    catTutorials: "Tutoriales & Guías",
+    catCaseStudies: "Casos de Estudio",
     editorBtnBold: "Negrita",
     editorBtnItalic: "Cursiva",
     editorBtnH2: "Encabezado H2",
@@ -262,6 +297,7 @@ export const translations = {
     editorStatusDraft: "Borrador",
     editorStatusPublished: "Publicado",
     editorStatusLabel: "Estado:",
+    editorSsrStatus: "Activo (Vite 6)",
 
     // Studio: Schema Tab
     schemaHeading: "Diseñador Visual de Esquemas y Post Types Dinámicos",
@@ -269,6 +305,13 @@ export const translations = {
     schemaFieldTitle: "Nombre del Campo",
     schemaFieldType: "Tipo de Campo",
     schemaFieldAction: "Acción",
+    schemaFieldPlaceholder: "Nombre del campo (ej. biografia_autor)",
+    schemaTypeString: "Cadena de Texto",
+    schemaTypeRichText: "Texto Enriquecido (TipTap)",
+    schemaTypeMedia: "Archivo Multimedia",
+    schemaTypeRelation: "Relación (FK)",
+    schemaTypeBoolean: "Booleano (Flag)",
+    schemaTypeJson: "Metadatos JSON",
     schemaBtnAddField: "+ Agregar Campo Personalizado",
     schemaPreviewTitle: "Blueprint del Esquema Generado (JSON)",
 
@@ -277,6 +320,7 @@ export const translations = {
     previewPublishedBy: "Publicado por Sarah Jenkins",
     previewReadTime: "4 min de lectura",
     previewLikes: "248 ronroneos",
+    previewRenderedWith: "Renderizado con Frontend Inertia.js 2 + React 19",
 
     // Features Section
     featuresBadge: "Diseñado para Velocidad y Control",
@@ -324,7 +368,7 @@ export const translations = {
     compRow3Ghost: "Ecosistema limitado de extensiones",
 
     compRow4Title: "Tiempo de Respuesta (TTFB promedio)",
-    compRow4Mew: "⚡ < 38ms",
+    compRow4Mew: "⚡ &lt; 38ms",
     compRow4Wp: "🐢 850ms - 2,400ms",
     compRow4Strapi: "⚠️ 250ms - 600ms (doble salto)",
     compRow4Ghost: "⚡ 120ms - 300ms",
@@ -385,7 +429,7 @@ export const translations = {
     ctaTitle: "¿Listo para liberar la agilidad felina en tus contenidos?",
     ctaSubtitle: "Experimenta la próxima evolución en publicación digital. Rápido, seguro y un placer de mantener.",
     ctaBtnStar: "Ver en GitHub",
-    ctaBtnDemo: "Ejecutar Entorno Local",
+    ctaBtnDemo: "Probar Demo en Render",
 
     // Live Demo & Open Source Section
     demoSectionBadge: "Demo en la Nube y Código Abierto",
@@ -405,6 +449,10 @@ export const translations = {
     footerDesc: 'MewCMS es un sistema gestor de contenidos de próxima generación y alto rendimiento creado con Laravel 12, Inertia.js 2, React 19 y Tailwind CSS v4. Desarrollado con dedicación sin fines de lucro por <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: var(--color-cyan); text-decoration: underline;">deepsoft.lat</a>.',
     footerLinksTitle: "Navegación",
     footerLegalTitle: "Código Abierto & Arquitectura",
+    footerDevelopedBy: "Desarrollado por deepsoft.lat",
+    footerLicenseMit: "Licencia Libre MIT",
+    footerOpenSource: 'Licencia MIT • <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: var(--color-emerald); text-decoration: none; font-weight: 600;">deepsoft.lat</a> Código Abierto',
+    footerPurr: "🐾 Rendimiento que Ronronea",
     footerCopy: '© 2026 <a href="https://deepsoft.lat" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: none; font-weight: 600;">deepsoft.lat</a> y Colaboradores de MewCMS. Publicado bajo Licencia MIT.'
   }
 };

@@ -1,6 +1,35 @@
 import { translations } from './i18n.js';
 
-let currentLang = localStorage.getItem('mewcms_lang') || 'es';
+// Detect preferred language:
+// 1. User manual selection in localStorage (if previously selected)
+// 2. Browser language preferences (navigator.languages / navigator.language)
+// 3. Default fallback to English ('en')
+function detectLanguage() {
+  try {
+    const saved = localStorage.getItem('mewcms_lang');
+    if (saved === 'en' || saved === 'es') {
+      return saved;
+    }
+
+    // Inspect browser language variables
+    const browserLangs = (navigator.languages && navigator.languages.length)
+      ? navigator.languages
+      : [navigator.language || navigator.userLanguage || navigator.browserLanguage || 'en'];
+
+    for (const rawLang of browserLangs) {
+      if (!rawLang || typeof rawLang !== 'string') continue;
+      const code = rawLang.toLowerCase().split('-')[0].trim();
+      if (code === 'es') return 'es';
+      if (code === 'en') return 'en';
+    }
+  } catch (e) {
+    // Gracefully handle restricted storage/navigator environments
+  }
+
+  return 'en';
+}
+
+let currentLang = detectLanguage();
 
 // State for Interactive Studio
 let studioState = {
@@ -110,6 +139,15 @@ function applyLanguage(lang) {
 
   const dict = translations[lang] || translations.en;
 
+  // Update document title and meta description
+  if (dict.docTitle) {
+    document.title = dict.docTitle;
+  }
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && dict.metaDesc) {
+    metaDesc.setAttribute('content', dict.metaDesc);
+  }
+
   // Translate all elements with data-i18n
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -126,8 +164,12 @@ function applyLanguage(lang) {
     }
   });
 
-  // Update title attribute on html
+  // Update lang attribute on html
   document.documentElement.lang = lang;
+
+  // Refresh dynamic UI components that depend on active language
+  renderLivePreview();
+  renderSchemaFieldsList();
 }
 
 // Interactive Studio Playground
@@ -288,7 +330,7 @@ function renderSchemaFieldsList() {
         <strong>${field.name}</strong>
         <span class="field-pill-type">${field.type}</span>
       </div>
-      <button class="field-delete-btn" data-index="${index}" title="Remove">✕</button>
+      <button class="field-delete-btn" data-index="${index}" title="${currentLang === 'es' ? 'Eliminar campo' : 'Remove field'}">✕</button>
     `;
     container.appendChild(item);
   });

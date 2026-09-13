@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MewCMS 🐾 The Feline-Fast CMS for Modern Builders</title>
+  <meta name="description" content="MewCMS is a high-performance Content Management System built with Laravel 12, Inertia.js 2, React 19, TipTap, and Tailwind CSS. Unmatched speed, zero plugin bloat, and pure agility.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- OpenGraph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MewCMS - The Feline-Fast Modern CMS">
+  <meta property="og:description" content="Say goodbye to bloated legacy CMS platforms. MewCMS unites Laravel 12 with React 19 and Inertia.js 2 for feline agility and sub-38ms TTFB.">
+  <meta property="og:image" content="/assets/mewcms_hero_ui.jpg">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/styles/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Orbs -->
+  <div class="ambient-light ambient-cyan"></div>
+  <div class="ambient-light ambient-violet"></div>
+  <div class="ambient-light ambient-pink"></div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-brand" id="nav-brand-link">
+        <img src="/assets/logo.svg" alt="MewCMS Logo" class="nav-logo-svg">
+        <span class="brand-text">MewCMS</span>
+        <span class="brand-badge">v2.4</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#features" class="nav-link" data-i18n="navFeatures">Características</a></li>
+          <li><a href="#studio" class="nav-link" data-i18n="navStudio">Estudio de Contenido</a></li>
+          <li><a href="#comparison" class="nav-link" data-i18n="navComparison">vs Competidores</a></li>
+          <li><a href="#benchmarks" class="nav-link" data-i18n="navBenchmarks">Rendimiento</a></li>
+          <li><a href="#demo" class="nav-link" style="color: var(--color-cyan); font-weight: 600;">🚀 Demo &amp; Repo</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Interactive Language Switcher -->
+        <div class="lang-switcher" aria-label="Language Selector">
+          <button id="lang-es" class="lang-btn active" title="Español">ES</button>
+          <button id="lang-en" class="lang-btn" title="English">EN</button>
+        </div>
+
+        <a href="https://mewcms.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-primary-nav" id="btn-nav-demo">
+          <span>🚀</span>
+          <span>Live Demo</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          <span data-i18n="heroBadge">🐾 CMS con Agilidad Felina para Creadores Modernos</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span data-i18n="heroTitlePrefix">Ágil, Elegante y</span><br>
+          <span class="hero-highlight" data-i18n="heroTitleHighlight">Increíblemente Rápido.</span>
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          Desarrollado con Laravel 12, Inertia.js 2, React 19 y TipTap. Despídete del desastre de plugins y los tiempos de carga lentos. MewCMS brinda agilidad felina tanto a desarrolladores como a editores de contenido.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#studio" class="btn btn-glow" id="hero-cta-primary">
+            <span>✨</span>
+            <span data-i18n="heroCtaPrimary">Probar Estudio Interactivo</span>
+          </a>
+          <a href="#comparison" class="btn btn-glass" id="hero-cta-secondary">
+            <span>⚡</span>
+            <span data-i18n="heroCtaSecondary">Comparar vs WordPress</span>
+          </a>
+        </div>
+
+        <!-- 4 Key Metric Cards -->
+        <div class="hero-metrics-grid">
+          <div class="metric-card">
+            <div class="metric-val" data-i18n="heroMetricTtfbVal">&lt; 38ms</div>
+            <div class="metric-label" data-i18n="heroMetricTtfb">Tiempo de Respuesta (TTFB)</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val" data-i18n="heroMetricPluginsVal">0 Bloat</div>
+            <div class="metric-label" data-i18n="heroMetricPlugins">Plugins Externos Requeridos</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val" data-i18n="heroMetricLighthouseVal">100/100</div>
+            <div class="metric-label" data-i18n="heroMetricLighthouse">Puntaje Google Lighthouse</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val" data-i18n="heroMetricTypeSafeVal">End-to-End</div>
+            <div class="metric-label" data-i18n="heroMetricTypeSafe">Seguridad de Tipos</div>
+          </div>
+        </div>
+
+        <!-- Visual Hero Showcase Banner -->
+        <div class="hero-visual-wrapper">
+          <div class="floating-pill floating-pill-left">
+            <span class="status-dot"></span>
+            <span>🐾 Feline Agility Engine • Live Active</span>
+          </div>
+
+          <div class="floating-pill floating-pill-right">
+            <span>⚡ Sub-35ms TTFB • 0 Vulnerabilities</span>
+          </div>
+
+          <div class="hero-visual-inner">
+            <img src="/assets/mewcms_hero_ui.jpg" alt="MewCMS Futuristic Dashboard UI" class="hero-visual-img" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND LORE & MASCOT IDENTITY SECTION -->
+    <section class="brand-section" id="identity">
+      <div class="container">
+        <div class="brand-card-main">
+          <div class="brand-logo-container">
+            <img src="/assets/mewcms_cat_logo.jpg" alt="MewCMS Feline Logo" class="brand-logo-img">
+          </div>
+
+          <div class="brand-info">
+            <h2 data-i18n="brandTitle">El Espíritu de MewCMS</h2>
+            <div class="brand-tagline" data-i18n="brandSubtitle">¿Por qué un felino como mascota? Porque la gestión de contenidos moderna no debe arrastrarse como un mamut pesado.</div>
+
+            <div class="brand-lore-grid">
+              <div class="lore-item">
+                <div class="lore-icon">🐈‍⬛</div>
+                <h3 data-i18n="brandStory1Title">Agilidad Felina</h3>
+                <p data-i18n="brandStory1Desc">Los gatos no tienen peso superfluo. Mientras las plataformas tradicionales arrastran 20 años de deuda técnica y 50 plugins externos, MewCMS es ultra ligero, elástico e instantáneamente reactivo.</p>
+              </div>
+
+              <div class="lore-item">
+                <div class="lore-icon">🐾</div>
+                <h3 data-i18n="brandStory2Title">Garras Afiladas, Cero Relleno</h3>
+                <p data-i18n="brandStory2Desc">Equipado con esquemas dinámicos, taxonomías jerárquicas, constructor de menús arrastrable y cajón de medios integrado. Todo listo de fábrica sin arriesgarte a plugins vulnerables.</p>
+              </div>
+
+              <div class="lore-item">
+                <div class="lore-icon">⚡</div>
+                <h3 data-i18n="brandStory3Title">Rendimiento que Ronronea</h3>
+                <p data-i18n="brandStory3Desc">Consultas SQL en sub-milisegundos, tablas relacionales con índices reales y un puente con Inertia.js 2 que brinda la fluidez de una SPA con la simplicidad de un despliegue monolítico.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CONTENT STUDIO PLAYGROUND -->
+    <section class="studio-section" id="studio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="studioBadge">Playground Interactivo</span>
+          <h2 class="section-title" data-i18n="studioTitle">Prueba las Capacidades de Creación de Contenido</h2>
+          <p class="section-subtitle" data-i18n="studioSubtitle">Comprueba lo sencillo que es redactar artículos, definir esquemas dinámicos personalizados y previsualizar publicaciones en tiempo real.</p>
+        </div>
+
+        <!-- Studio Mode Tabs -->
+        <div class="studio-tabs-nav" role="tablist">
+          <button class="studio-tab-btn active" data-tab="editor" role="tab">
+            <span>✍️</span>
+            <span data-i18n="studioTabEditor">1. Editor de Artículos TipTap</span>
+          </button>
+          <button class="studio-tab-btn" data-tab="schema" role="tab">
+            <span>🧩</span>
+            <span data-i18n="studioTabSchema">2. Constructor de Esquemas</span>
+          </button>
+          <button class="studio-tab-btn" data-tab="preview" role="tab">
+            <span>🚀</span>
+            <span data-i18n="studioTabPreview">3. Vista Previa Pública</span>
+          </button>
+        </div>
+
+        <!-- Studio Container Frame -->
+        <div class="studio-frame">
+          <!-- PANEL 1: ARTICLE EDITOR -->
+          <div class="studio-panel active" id="panel-editor" role="tabpanel">
+            <div class="editor-grid-top">
+              <div class="form-group">
+                <label class="form-label" data-i18n="editorTitleLabel">Título del Artículo</label>
+                <input type="text" id="studio-title-input" class="form-input" value="Why We Migrated from WordPress to MewCMS" data-i18n-placeholder="editorTitlePlaceholder">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="editorSlugLabel">URL Automática (Slug)</label>
+                <input type="text" id="studio-slug-input" class="form-input" value="/posts/why-we-migrated-from-wordpress-to-mewcms" readonly style="color: var(--color-cyan); font-family: var(--font-code);">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" data-i18n="editorCatLabel">Taxonomía (Categoría)</label>
+                <select id="studio-cat-select" class="form-select">
+                  <option value="Architecture & DevOps">Architecture & DevOps</option>
+                  <option value="Frontend & React 19">Frontend & React 19</option>
+                  <option value="Tutorials & Guides">Tutorials & Guides</option>
+                  <option value="Case Studies">Case Studies</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+              <label class="form-label" data-i18n="editorTagsLabel">Etiquetas (Tags)</label>
+              <input type="text" id="studio-tags-input" class="form-input" value="Laravel, React19, Inertia, HighPerformance">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="editorContentLabel">Contenido Enriquecido WYSIWYG (TipTap)</label>
+              
+              <!-- Toolbar -->
+              <div class="editor-toolbar">
+                <button type="button" class="tool-btn" id="tool-bold" data-i18n="editorBtnBold">Negrita</button>
+                <button type="button" class="tool-btn" id="tool-italic" data-i18n="editorBtnItalic">Cursiva</button>
+                <button type="button" class="tool-btn" id="tool-h2" data-i18n="editorBtnH2">Encabezado H2</button>
+                <button type="button" class="tool-btn" id="tool-quote" data-i18n="editorBtnQuote">Cita</button>
+                <button type="button" class="tool-btn tool-btn-special" id="tool-media">
+                  <span>🖼️</span>
+                  <span data-i18n="editorBtnMedia">Abrir Gestor de Medios</span>
+                </button>
+              </div>
+
+              <textarea id="studio-content-textarea" class="editor-textarea" rows="8">After maintaining 35 client websites on legacy WordPress installations, our engineering team hit a breaking point. Plugin updates routinely broke our custom post types, unindexed wp_postmeta queries choked our database servers during traffic spikes, and our Time-To-First-Byte (TTFB) hovered around a sluggish 850ms.
+
+We migrated to MewCMS—and the transformation was instantaneous.
+
+By uniting Laravel 12's rock-solid backend with Inertia.js 2 and React 19, MewCMS gives our developers end-to-end TypeScript safety and sub-35ms response times. The built-in QuickMediaDrawer eliminated our reliance on vulnerable third-party file managers, and the dynamic schema engine allows us to spin up custom content structures in seconds. It purrs like a kitten, yet strikes with enterprise resilience.</textarea>
+            </div>
+
+            <!-- Simulated Media Drawer Box -->
+            <div class="drawer-preview-box" id="drawer-preview">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <strong style="color: #c4b5fd;">📂 QuickMediaDrawer (Laravel Filemanager + Intervention Image)</strong>
+                <span class="status-dot"></span>
+              </div>
+              <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 12px;" data-i18n="editorMediaNotice">🐾 QuickMediaDrawer: Selección instantánea de archivos con carga asíncrona y navegación por carpetas.</p>
+              <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+                <div style="width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-cyan);">
+                  <img src="/assets/mewcms_cat_logo.jpg" alt="Cat Logo Asset" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="width: 140px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-violet);">
+                  <img src="/assets/mewcms_hero_ui.jpg" alt="Hero UI Asset" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="font-size: 0.82rem; color: #a5f3fc;">
+                  <div>📁 /public/storage/articles/2026/09/</div>
+                  <div>✅ Auto-optimized WebP (28 KB)</div>
+                  <div>⚡ Async Upload Status: 100% Completed</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Editor Footer -->
+            <div class="editor-footer-status">
+              <div style="display: flex; gap: 12px; font-size: 0.85rem; color: var(--text-muted);">
+                <span><strong style="color: #fff;" data-i18n="editorStatusLabel">Estado:</strong> <span style="color: var(--color-emerald);" data-i18n="editorStatusPublished">Publicado</span></span>
+                <span>•</span>
+                <span>Inertia SSR: <span style="color: var(--color-cyan);">Activo (Vite 6)</span></span>
+              </div>
+              <button type="button" class="btn btn-glow" style="padding: 6px 16px; font-size: 0.85rem;" onclick="document.querySelector('[data-tab=\'preview\']').click();">
+                <span>👁️</span>
+                <span data-i18n="studioTabPreview">3. Vista Previa Pública</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- PANEL 2: SCHEMA BUILDER -->
+          <div class="studio-panel" id="panel-schema" role="tabpanel">
+            <div class="schema-builder-layout">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 6px;" data-i18n="schemaHeading">Diseñador Visual de Esquemas y Post Types</h3>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;" data-i18n="schemaSub">Define campos personalizados al vuelo sin tener que escribir migraciones SQL.</p>
+
+                <!-- Fields List -->
+                <div class="schema-field-list" id="schema-fields-container">
+                  <!-- Injected via JavaScript -->
+                </div>
+
+                <!-- Add Field Controls -->
+                <div style="display: flex; gap: 10px; margin-top: 16px;">
+                  <input type="text" id="new-field-name" class="form-input" placeholder="Field name (e.g. author_bio)" style="flex: 1;">
+                  <select id="new-field-type" class="form-select" style="width: 170px;">
+                    <option value="string">Text String</option>
+                    <option value="richtext">RichText (TipTap)</option>
+                    <option value="media">Media File</option>
+                    <option value="relation">Relation (FK)</option>
+                    <option value="boolean">Boolean Flag</option>
+                    <option value="json">JSON Metadata</option>
+                  </select>
+                  <button type="button" id="btn-add-schema-field" class="btn btn-glass" style="padding: 8px 16px; font-size: 0.86rem; border-color: var(--color-cyan); color: var(--color-cyan);" data-i18n="schemaBtnAddField">+ Agregar Campo</button>
+                </div>
+              </div>
+
+              <!-- Schema Code Output -->
+              <div>
+                <h4 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: 12px; color: var(--text-muted);" data-i18n="schemaPreviewTitle">Blueprint del Esquema Generado (JSON)</h4>
+                <pre id="schema-json-preview" class="schema-code-box"></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL 3: LIVE PUBLIC PREVIEW -->
+          <div class="studio-panel" id="panel-preview" role="tabpanel">
+            <div class="preview-article-frame">
+              <div class="preview-meta-bar">
+                <span class="preview-tag-pill" id="preview-rendered-category">Architecture & DevOps</span>
+                <span>•</span>
+                <span data-i18n="previewReadTime">4 min de lectura</span>
+                <span>•</span>
+                <span data-i18n="previewPublishedBy">Publicado por Sarah Jenkins</span>
+              </div>
+
+              <h1 class="preview-title" id="preview-rendered-title">Why We Migrated from WordPress to MewCMS</h1>
+
+              <div id="preview-rendered-tags" style="display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;"></div>
+
+              <img src="/assets/mewcms_hero_ui.jpg" alt="Article Hero Banner" class="preview-hero-banner">
+
+              <div class="preview-body-content" id="preview-rendered-body">
+                <!-- Injected via JavaScript -->
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-glass); padding-top: 18px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <button type="button" id="btn-purr-like" class="btn btn-glass" style="padding: 8px 18px; font-size: 0.88rem; gap: 8px; border-color: rgba(236, 72, 153, 0.4);">
+                    <span>🐾</span>
+                    <span id="preview-likes-count">248 ronroneos</span>
+                  </button>
+                </div>
+
+                <div style="font-size: 0.82rem; color: var(--text-dim);">
+                  Rendered with Inertia.js 2 + React 19 Frontend
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE ARCHITECTURAL PILLARS / FEATURES -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="featuresBadge">Diseñado para Velocidad y Control</span>
+          <h2 class="section-title" data-i18n="featuresTitle">Superpoderes Nativos, Sin Plugins Frágiles</h2>
+          <p class="section-subtitle" data-i18n="featuresSubtitle">Todo lo que una empresa o agencia moderna necesita está integrado de forma nativa en el núcleo.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feat 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">⚡</div>
+            <h3 class="feature-title" data-i18n="feat1Title">Laravel 12 + React 19 + Inertia 2</h3>
+            <p class="feature-desc" data-i18n="feat1Desc">La simplicidad del backend monolítico con la reactividad de una SPA. Olvídate del dolor de cabeza de múltiples repositorios, CORS o APIs separadas.</p>
+          </div>
+
+          <!-- Feat 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">📁</div>
+            <h3 class="feature-title" data-i18n="feat2Title">QuickMediaDrawer y Gestor de Archivos</h3>
+            <p class="feature-desc" data-i18n="feat2Desc">Árbol de carpetas integrado, subida asíncrona multi-archivo con barra de progreso e inserción directa en el editor TipTap.</p>
+          </div>
+
+          <!-- Feat 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🧩</div>
+            <h3 class="feature-title" data-i18n="feat3Title">Esquemas y Tipos de Contenido Dinámicos</h3>
+            <p class="feature-desc" data-i18n="feat3Desc">Crea modelos a medida para portafolios, inmuebles, productos o documentación sin tocar código de base de datos.</p>
+          </div>
+
+          <!-- Feat 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🌳</div>
+            <h3 class="feature-title" data-i18n="feat4Title">Menús Jerárquicos y Taxonomías</h3>
+            <p class="feature-desc" data-i18n="feat4Desc">Constructor visual arrastrable (Drag & Drop) con ordenación multinivel y resolución automática de URLs hacia artículos del CMS.</p>
+          </div>
+
+          <!-- Feat 5 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🌐</div>
+            <h3 class="feature-title" data-i18n="feat5Title">Multi-Idioma y Multi-Sitio Nativo</h3>
+            <p class="feature-desc" data-i18n="feat5Desc">Tablas relacionales en base de datos para idiomas (`cms_langs`), traducciones y soporte multi-tenant de dominios sin costes adicionales.</p>
+          </div>
+
+          <!-- Feat 6 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🛡️</div>
+            <h3 class="feature-title" data-i18n="feat6Title">Registro de Auditoría y Permisos RBAC</h3>
+            <p class="feature-desc" data-i18n="feat6Desc">Audita cada acción administrativa mediante `AdmLog`. Control de acceso granular por módulos y acciones para máxima seguridad corporativa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETITOR COMPARISON MATRIX -->
+    <section class="comparison-section" id="comparison">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="compBadge">Comparativa Sin Concesiones</span>
+          <h2 class="section-title" data-i18n="compTitle">MewCMS vs. Los Gigantes del Mercado</h2>
+          <p class="section-subtitle" data-i18n="compSubtitle">Descubre por qué desarrolladores y agencias están jubilando plataformas heredadas para adoptar MewCMS.</p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th data-i18n="compColFeature">Capacidad / Métrica</th>
+                <th class="th-mew" data-i18n="compColMew">MewCMS 🐾</th>
+                <th data-i18n="compColWp">WordPress</th>
+                <th data-i18n="compColStrapi">Strapi (Headless)</th>
+                <th data-i18n="compColGhost">Ghost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="comp-feature-name" data-i18n="compRow1Title">Arquitectura Tecnológica</td>
+                <td class="td-mew" data-i18n="compRow1Mew">Laravel 12 + Inertia 2 + React 19</td>
+                <td data-i18n="compRow1Wp">PHP 7/8 heredado (código espagueti)</td>
+                <td data-i18n="compRow1Strapi">Node.js (Solo API Headless)</td>
+                <td data-i18n="compRow1Ghost">Node.js (Handlebars/API)</td>
+              </tr>
+              <tr>
+                <td class="comp-feature-name" data-i18n="compRow2Title">Estructura de Base de Datos</td>
+                <td class="td-mew" data-i18n="compRow2Mew">Relacional limpia, índices y FKs reales</td>
+                <td data-i18n="compRow2Wp">Cuello de botella en wp_postmeta EAV</td>
+                <td data-i18n="compRow2Strapi">Relacional / Documental</td>
+                <td data-i18n="compRow2Ghost">Relacional (enfocado a blogs)</td>
+              </tr>
+              <tr>
+                <td class="comp-feature-name" data-i18n="compRow3Title">Riesgo y Vulnerabilidad de Plugins</td>
+                <td class="td-mew" data-i18n="compRow3Mew">0 plugins requeridos (todo nativo)</td>
+                <td data-i18n="compRow3Wp">Más del 90% de fallos de seguridad</td>
+                <td data-i18n="compRow3Strapi">Dependencias del ecosistema NPM</td>
+                <td data-i18n="compRow3Ghost">Ecosistema limitado de extensiones</td>
+              </tr>
+              <tr>
+                <td class="comp-feature-name" data-i18n="compRow4Title">Tiempo de Respuesta (TTFB promedio)</td>
+                <td class="td-mew" data-i18n="compRow4Mew">⚡ &lt; 38ms</td>
+                <td data-i18n="compRow4Wp">🐢 850ms - 2,400ms</td>
+                <td data-i18n="compRow4Strapi">⚠️ 250ms - 600ms (doble salto)</td>
+                <td data-i18n="compRow4Ghost">⚡ 120ms - 300ms</td>
+              </tr>
+              <tr>
+                <td class="comp-feature-name" data-i18n="compRow5Title">Experiencia de Redacción</td>
+                <td class="td-mew" data-i18n="compRow5Mew">TipTap WYSIWYG + QuickMediaDrawer</td>
+                <td data-i18n="compRow5Wp">Editor Gutenberg pesado y lento</td>
+                <td data-i18n="compRow5Strapi">Markdown básico / Frontend aparte</td>
+                <td data-i18n="compRow5Ghost">Editor minimalista limpio</td>
+              </tr>
+              <tr>
+                <td class="comp-feature-name" data-i18n="compRow6Title">Despliegue y Mantenimiento</td>
+                <td class="td-mew" data-i18n="compRow6Mew">Un solo despliegue, actualizaciones atómicas</td>
+                <td data-i18n="compRow6Wp">Alto riesgo de rotura al actualizar plugins</td>
+                <td data-i18n="compRow6Strapi">Requiere 2 repositorios y 2 hostings</td>
+                <td data-i18n="compRow6Ghost">Monolítico o en su nube</td>
+              </tr>
+              <tr>
+                <td class="comp-feature-name" data-i18n="compRow7Title">Soporte Multi-Idioma</td>
+                <td class="td-mew" data-i18n="compRow7Mew">Nativo en base de datos (Cero costo)</td>
+                <td data-i18n="compRow7Wp">Plugins de pago (conflictos WPML/Polylang)</td>
+                <td data-i18n="compRow7Strapi">Requiere plugin adicional</td>
+                <td data-i18n="compRow7Ghost">No soportado nativamente</td>
+              </tr>
+              <tr>
+                <td class="comp-feature-name" data-i18n="compRow8Title">Gestor de Menús Arrastrable</td>
+                <td class="td-mew" data-i18n="compRow8Mew">Árbol visual nativo con auto-enrutamiento</td>
+                <td data-i18n="compRow8Wp">Interfaz antigua y rígida</td>
+                <td data-i18n="compRow8Strapi">Debe programarse a mano en el frontend</td>
+                <td data-i18n="compRow8Ghost">Lista plana simple de enlaces</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENCHMARKS & TELEMETRY SECTION -->
+    <section class="benchmarks-section" id="benchmarks">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="benchBadge">Telemetría y Rendimiento Real</span>
+          <h2 class="section-title" data-i18n="benchTitle">Superioridad Arquitectónica Demostrable</h2>
+          <p class="section-subtitle" data-i18n="benchSubtitle">Pruebas de estrés realizadas en instancias idénticas de 2 vCPU / 4GB RAM con 50,000 artículos.</p>
+        </div>
+
+        <div class="benchmarks-grid">
+          <!-- Card 1 -->
+          <div class="benchmark-card">
+            <h3 class="bench-title" data-i18n="benchCard1Title">Tiempo al Primer Byte (TTFB)</h3>
+            <div class="bench-stat-group">
+              <div class="bench-stat-row">
+                <span style="color: var(--color-cyan); font-weight: 700;">MewCMS</span>
+                <span style="color: var(--color-cyan); font-weight: 700;" data-i18n="benchCard1Mew">34 ms</span>
+              </div>
+              <div class="bench-bar-container">
+                <div class="bench-bar-mew" style="width: 4%;"></div>
+              </div>
+            </div>
+            <div class="bench-stat-group">
+              <div class="bench-stat-row">
+                <span style="color: var(--color-rose);">WordPress</span>
+                <span style="color: var(--color-rose);" data-i18n="benchCard1Wp">920 ms</span>
+              </div>
+              <div class="bench-bar-container">
+                <div class="bench-bar-wp" style="width: 95%;"></div>
+              </div>
+            </div>
+            <div class="bench-unit" data-i18n="benchCard1Unit">Menor es mejor</div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="benchmark-card">
+            <h3 class="bench-title" data-i18n="benchCard2Title">Consultas SQL por Página de Artículo</h3>
+            <div class="bench-stat-group">
+              <div class="bench-stat-row">
+                <span style="color: var(--color-cyan); font-weight: 700;">MewCMS</span>
+                <span style="color: var(--color-cyan); font-weight: 700;" data-i18n="benchCard2Mew">3 Consultas</span>
+              </div>
+              <div class="bench-bar-container">
+                <div class="bench-bar-mew" style="width: 6%;"></div>
+              </div>
+            </div>
+            <div class="bench-stat-group">
+              <div class="bench-stat-row">
+                <span style="color: var(--color-rose);">WordPress</span>
+                <span style="color: var(--color-rose);" data-i18n="benchCard2Wp">54 Consultas</span>
+              </div>
+              <div class="bench-bar-container">
+                <div class="bench-bar-wp" style="width: 90%;"></div>
+              </div>
+            </div>
+            <div class="bench-unit" data-i18n="benchCard2Unit">Menor es mejor</div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="benchmark-card">
+            <h3 class="bench-title" data-i18n="benchCard3Title">Consumo de Memoria por Petición</h3>
+            <div class="bench-stat-group">
+              <div class="bench-stat-row">
+                <span style="color: var(--color-cyan); font-weight: 700;">MewCMS</span>
+                <span style="color: var(--color-cyan); font-weight: 700;" data-i18n="benchCard3Mew">14 MB</span>
+              </div>
+              <div class="bench-bar-container">
+                <div class="bench-bar-mew" style="width: 12%;"></div>
+              </div>
+            </div>
+            <div class="bench-stat-group">
+              <div class="bench-stat-row">
+                <span style="color: var(--color-rose);">WordPress</span>
+                <span style="color: var(--color-rose);" data-i18n="benchCard3Wp">118 MB</span>
+              </div>
+              <div class="bench-bar-container">
+                <div class="bench-bar-wp" style="width: 92%;"></div>
+              </div>
+            </div>
+            <div class="bench-unit" data-i18n="benchCard3Unit">Menor es mejor</div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="benchmark-card">
+            <h3 class="bench-title" data-i18n="benchCard4Title">Índice de Vulnerabilidades</h3>
+            <div class="bench-stat-group">
+              <div class="bench-stat-row">
+                <span style="color: var(--color-cyan); font-weight: 700;">MewCMS</span>
+                <span style="color: var(--color-cyan); font-weight: 700;" data-i18n="benchCard4Mew">0 CVEs</span>
+              </div>
+              <div class="bench-bar-container">
+                <div class="bench-bar-mew" style="width: 1%;"></div>
+              </div>
+            </div>
+            <div class="bench-stat-group">
+              <div class="bench-stat-row">
+                <span style="color: var(--color-rose);">WordPress Plugins</span>
+                <span style="color: var(--color-rose);" data-i18n="benchCard4Wp">4,200+ CVEs</span>
+              </div>
+              <div class="bench-bar-container">
+                <div class="bench-bar-wp" style="width: 98%;"></div>
+              </div>
+            </div>
+            <div class="bench-unit" data-i18n="benchCard4Unit">Riesgo por plugins externos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEVELOPER EXPERIENCE (DX) CODE COMPARISON -->
+    <section class="code-section" id="code">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="codeBadge">Placer para Desarrolladores</span>
+          <h2 class="section-title" data-i18n="codeTitle">Código Limpio Eloquent + React vs. Espagueti Heredado</h2>
+          <p class="section-subtitle" data-i18n="codeSubtitle">MewCMS otorga a los desarrolladores paradigmas MVC modernos, props tipadas con Inertia y componentes reactivos.</p>
+        </div>
+
+        <div class="code-tabs-nav">
+          <button type="button" class="code-tab-btn active" data-code="mew" data-i18n="codeTabMew">MewCMS (Laravel 12 + Inertia)</button>
+          <button type="button" class="code-tab-btn" data-code="wp" data-i18n="codeTabWp">WordPress (Hooks PHP Heredados)</button>
+        </div>
+
+        <div class="code-window">
+          <div class="code-window-header">
+            <div class="mac-dots">
+              <span class="mac-dot dot-red"></span>
+              <span class="mac-dot dot-yellow"></span>
+              <span class="mac-dot dot-green"></span>
+            </div>
+            <span class="code-filename" id="showcase-filename">app/Http/Controllers/Admin/ArticleController.php</span>
+            <div style="font-size: 0.78rem; color: var(--color-cyan);">UTF-8 • PHP 8.3 / TSX</div>
+          </div>
+          <pre class="code-pre"><code id="showcase-code">// MewCMS Controller (Laravel 12 + Inertia.js 2)
+namespace App\Http\Controllers\Admin;
+
+use App\Models\CmsArticle;
+use Inertia\Inertia;
+use Illuminate\Http\Request;
+
+class ArticleController extends Controller
+{
+    public function index(Request $request)
+    {
+        $articles = CmsArticle::query()
+            ->with(['taxonomies', 'author', 'schema'])
+            ->when($request->search, fn($q, $s) => $q->where('title', 'like', "%{$s}%"))
+            ->latest()
+            ->paginate(15);
+
+        // Inertia renders React 19 SPA view seamlessly without REST/GraphQL bloat
+        return Inertia::render('admin/articles/index', [
+            'articles' => $articles,
+            'filters' => $request->only(['search', 'category'])
+        ]);
+    }
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE CLOUD DEMO & OPEN SOURCE SECTION -->
+    <section class="demo-section" id="demo">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="demoSectionBadge">Demo en la Nube y Código Abierto</span>
+          <h2 class="section-title" data-i18n="demoSectionTitle">Prueba MewCMS en Vivo y Explora el Código Libre</h2>
+          <p class="section-subtitle" data-i18n="demoSectionSubtitle">Prueba el despliegue en producción alojado en Render o inspecciona el código fuente completo en GitHub.</p>
+        </div>
+
+        <div class="demo-grid">
+          <!-- Card 1: Live Demo on Render -->
+          <div class="demo-card demo-card-render">
+            <div class="demo-card-top">
+              <span class="demo-icon-badge badge-render">
+                <span>🌐</span> Cloud Deployment
+              </span>
+              <h3 class="demo-card-title" data-i18n="demoCardRenderTitle">Demo en Vivo en Render</h3>
+              <p class="demo-card-desc" data-i18n="demoCardRenderDesc">Despliegue completo en producción en Render. Prueba el enrutamiento dinámico, menús, taxonomías y tiempo de respuesta inferior a 38ms.</p>
+              <div class="demo-card-url">🔗 https://mewcms.onrender.com</div>
+            </div>
+            <a href="https://mewcms.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-glow" style="width: 100%;">
+              <span>🚀</span>
+              <span data-i18n="demoCardRenderBtn">Abrir Demo en Render</span>
+            </a>
+          </div>
+
+          <!-- Card 2: GitHub Open Source Repo -->
+          <div class="demo-card demo-card-github">
+            <div class="demo-card-top">
+              <span class="demo-icon-badge badge-github">
+                <span>📦</span> GitHub Open Source
+              </span>
+              <h3 class="demo-card-title" data-i18n="demoCardGhTitle">Repositorio Libre &amp; Open Source</h3>
+              <p class="demo-card-desc" data-i18n="demoCardGhDesc">Inspecciona el código fuente en Laravel 12 + Inertia.js 2 + React 19, clona el repositorio o contribuye en GitHub.</p>
+              <div class="demo-card-url">🔗 https://github.com/fishercom/mewcms/</div>
+            </div>
+            <a href="https://github.com/fishercom/mewcms/" target="_blank" rel="noopener noreferrer" class="btn btn-glass" style="width: 100%; border-color: var(--color-violet); color: #fff;">
+              <span>⭐</span>
+              <span data-i18n="demoCardGhBtn">Ver Repositorio en GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- DeepSoft Non-Profit & MIT License Banner -->
+        <div class="deepsoft-banner">
+          <div class="deepsoft-info">
+            <div class="deepsoft-icon">💙</div>
+            <div class="deepsoft-text">
+              <h4 data-i18n="deepsoftBadge">Desarrollado por DeepSoft (Sin Fines de Lucro)</h4>
+              <p data-i18n="deepsoftDesc">Una iniciativa de código abierto sin fines de lucro desarrollada con pasión por DeepSoft para brindar a la comunidad un CMS ágil, moderno y libre de bloat.</p>
+            </div>
+          </div>
+          <div class="mit-pill">
+            <span>⚖️</span>
+            <span data-i18n="licenseMit">Licencia MIT (100% Libre y Código Abierto)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="cta-title" data-i18n="ctaTitle">¿Listo para liberar la agilidad felina en tus contenidos?</h2>
+          <p class="cta-subtitle" data-i18n="ctaSubtitle">Experimenta la próxima evolución en publicación digital. Rápido, seguro y un placer de mantener.</p>
+          <div class="cta-buttons">
+            <a href="https://mewcms.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-glow">
+              <span>🚀</span>
+              <span>Probar Demo en Render</span>
+            </a>
+            <a href="https://github.com/fishercom/mewcms/" target="_blank" rel="noopener noreferrer" class="btn btn-glass">
+              <span>⭐</span>
+              <span data-i18n="ctaBtnStar">Ver en GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="/assets/logo.svg" alt="MewCMS Logo" style="width: 32px; height: 32px;">
+            <span class="brand-text" style="font-size: 1.3rem;">MewCMS</span>
+          </div>
+          <p data-i18n="footerDesc">MewCMS es un sistema gestor de contenidos de próxima generación y alto rendimiento creado con Laravel 12, Inertia.js 2, React 19 y Tailwind CSS v4. Desarrollado con dedicación sin fines de lucro por DeepSoft.</p>
+          <div style="margin-top: 12px; font-size: 0.85rem; color: var(--color-emerald); display: flex; align-items: center; gap: 6px;">
+            <span>⚖️</span>
+            <span>MIT License • DeepSoft Open Source</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerLinksTitle">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="https://mewcms.onrender.com" target="_blank" rel="noopener noreferrer" class="footer-link" style="color: var(--color-cyan);">🚀 Live Demo (Render)</a></li>
+            <li><a href="https://github.com/fishercom/mewcms/" target="_blank" rel="noopener noreferrer" class="footer-link" style="color: #c4b5fd;">⭐ GitHub Repository</a></li>
+            <li><a href="#features" class="footer-link" data-i18n="navFeatures">Características</a></li>
+            <li><a href="#studio" class="footer-link" data-i18n="navStudio">Estudio de Contenido</a></li>
+            <li><a href="#comparison" class="footer-link" data-i18n="navComparison">vs Competidores</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerLegalTitle">Código Abierto &amp; Arquitectura</h4>
+          <ul class="footer-links">
+            <li><span class="footer-link" style="cursor: default;">Laravel 12 &amp; PHP 8.3</span></li>
+            <li><span class="footer-link" style="cursor: default;">Inertia.js 2 &amp; React 19</span></li>
+            <li><span class="footer-link" style="cursor: default;">TipTap Rich Editor</span></li>
+            <li><span class="footer-link" style="cursor: default;">Desarrollado por DeepSoft</span></li>
+            <li><span class="footer-link" style="cursor: default;">Licencia Libre MIT</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footerCopy">© 2026 DeepSoft y Colaboradores de MewCMS. Publicado bajo Licencia MIT.</div>
+        <div style="display: flex; gap: 16px; align-items: center;">
+          <span style="color: var(--color-cyan);">🐾 Purring Performance</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Bundle -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

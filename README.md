@@ -25,7 +25,7 @@ Developed as an open-source initiative by **[DeepSoft](https://deepsoft.lat)**.
 - Dark plum background `#0B0910`, one neon purple accent `#B76CFF`
 - Titles in Cormorant Garamond, text in Jost Light, both self-hosted through `@fontsource` (latin subset only)
 - Scroll reveals use `opacity` and `transform` only, from one small IntersectionObserver; everything is off with `prefers-reduced-motion`
-- The hero video lives in `public/assets/hero/` (`hero-cat.mp4` + `hero-poster.webp`/`.jpg`, the poster being the video's last frame). It loads after the page has painted
+- The hero video (white cat, DeeVid AI export without watermark) lives in `public/assets/hero/` (`hero-cat.mp4` + `hero-poster.webp`/`.jpg`, the poster being the video's last frame). It loads after the page has painted
 - The logo is the CMS "code cat" in ivory with neon eyes: `public/assets/brand/mark.svg`, `public/favicon.svg`, `public/apple-touch-icon.png`
 
 ---

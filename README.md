@@ -1,32 +1,36 @@
-# MewCMS Web 🐾
+# MewCMS Web
 
-> Official interactive landing page & showcase for **MewCMS** — The feline-fast, modern Content Management System built with Laravel 12, Inertia.js 2, React 19, TipTap, and Tailwind CSS.
+> The landing page for **MewCMS**, the open-source content system for teams who run many sites in many languages. *Elegance, built in.*
 
-Developed with passion and as a non-profit open-source initiative by **[DeepSoft](https://github.com/fishercom)**.
-
----
-
-## 🚀 Live Demo & Links
-
-- **🌐 Live Production Demo:** [https://mewcms.onrender.com](https://mewcms.onrender.com)
-- **📦 Core MewCMS Engine Repository:** [https://github.com/fishercom/mewcms](https://github.com/fishercom/mewcms)
-- **📄 License:** [MIT License](LICENSE) (100% Free & Open Source)
+Developed as an open-source initiative by **[DeepSoft](https://deepsoft.lat)**.
 
 ---
 
-## ✨ Features Highlighted
+## Links
 
-- **🐾 Feline Agility:** Sub-38ms TTFB, 0 vulnerable plugin dependencies, clean relational database schema.
-- **🌐 Native Bilingual (EN / ES):** Instant real-time language switcher without page reload.
-- **🛠️ Interactive Content Studio:**
-  - TipTap WYSIWYG editor simulation with auto-slugs and QuickMediaDrawer.
-  - Dynamic Schema Forge for custom post types and custom fields with instant JSON blueprint generation.
-  - Live Public Preview of rendered content with interactive like/purr counters.
-- **⚡ Competitor Comparison:** In-depth benchmarks against WordPress, Strapi, and Ghost.
+- **Live demo:** [https://mewcms.onrender.com](https://mewcms.onrender.com)
+- **CMS repository:** [https://github.com/fishercom/mewcms](https://github.com/fishercom/mewcms)
+- **License:** [MIT](LICENSE)
 
 ---
 
-## 💻 Local Development
+## What the page covers
+
+- A full-screen hero film (a white cat on a dark stage with purple neon) that ends on the slogan
+- Six chapters: multi-site and themes, the block editor, the AI writing assistant, languages, the admin, and security/SEO/performance
+- A grid of the smaller features and a short section for developers
+
+## Design notes
+
+- Dark plum background `#0B0910`, one neon purple accent `#B76CFF`
+- Titles in Cormorant Garamond, text in Jost Light, both self-hosted through `@fontsource` (latin subset only)
+- Scroll reveals use `opacity` and `transform` only, from one small IntersectionObserver; everything is off with `prefers-reduced-motion`
+- The hero video lives in `public/assets/hero/` (`hero-cat.mp4` + `hero-poster.webp`/`.jpg`, the poster being the video's last frame). It loads after the page has painted
+- The logo is the CMS "code cat" in ivory with neon eyes: `public/assets/brand/mark.svg`, `public/favicon.svg`, `public/apple-touch-icon.png`
+
+---
+
+## Local development
 
 ```bash
 # Clone the repository
@@ -45,6 +49,6 @@ npm run build
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the **MIT License** — free for personal, educational, and commercial use. Developed by **DeepSoft**.

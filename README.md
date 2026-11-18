@@ -10,7 +10,7 @@ Developed as an open-source initiative by **[DeepSoft](https://deepsoft.lat)**.
 
 - **Live demo:** [https://mewcms.onrender.com](https://mewcms.onrender.com)
 - **CMS repository:** [https://github.com/fishercom/mewcms](https://github.com/fishercom/mewcms)
-- **License:** [MIT](LICENSE)
+- **License:** [GNU AGPL v3](LICENSE) (AGPL-3.0-only), the same as the CMS
 
 ---
 
@@ -51,4 +51,4 @@ npm run build
 
 ## License
 
-This project is licensed under the **MIT License** — free for personal, educational, and commercial use. Developed by **DeepSoft**.
+This website and MewCMS itself are free software under the **[GNU Affero General Public License v3.0](LICENSE)** (AGPL-3.0-only). If you modify this code and serve it over a network, you must offer its users the source of your modified version under the same license. Developed by **DeepSoft**.

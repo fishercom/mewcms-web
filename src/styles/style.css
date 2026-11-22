@@ -63,8 +63,8 @@ a { color: inherit; }
   border-color: var(--line);
 }
 .header-row { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
-.logo { display: inline-flex; align-items: center; gap: 12px; font: 400 27px/1 var(--serif); letter-spacing: .01em; text-decoration: none; }
-.logo img { width: 34px; height: 34px; filter: drop-shadow(0 0 10px rgba(183, 108, 255, .35)); }
+.logo { display: inline-flex; align-items: center; text-decoration: none; }
+.logo img { display: block; width: auto; height: 34px; filter: drop-shadow(0 0 10px rgba(139, 116, 255, .3)); }
 .nav { display: flex; gap: 32px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .nav a { position: relative; text-decoration: none; transition: color .2s; }
 .nav a::after {
@@ -177,14 +177,16 @@ a { color: inherit; }
   background: radial-gradient(circle, rgba(183, 108, 255, .16), transparent 60%);
   animation: breathe 8s ease-in-out infinite;
 }
-.final-mark { position: relative; width: 72px; height: 72px; margin: 0 auto 28px; filter: drop-shadow(0 0 18px rgba(183, 108, 255, .45)); }
+.final-mark { position: relative; width: 72px; height: 72px; margin: 0 auto 28px; filter: drop-shadow(0 0 18px rgba(139, 116, 255, .4)); }
 .final h2 { position: relative; margin: 0 0 18px; font: 300 clamp(48px, 7vw, 96px)/1 var(--serif); }
 .final h2 em { color: var(--lavender); }
 .final p { position: relative; max-width: 46ch; margin: 0 auto 36px; color: var(--muted); }
 .final .ctas { position: relative; justify-content: center; }
 
 .site-footer { padding-block: 36px calc(36px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
-.footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+.footer-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.footer-brand { display: inline-flex; align-items: center; gap: 8px; }
+.footer-brand img { display: block; width: auto; height: 20px; }
 .site-footer a { text-decoration-color: var(--line); text-underline-offset: 4px; }
 .site-footer a:hover { color: var(--fg); text-decoration-color: var(--neon); }
 

@@ -1,4 +1,12 @@
+import { resolve } from 'node:path';
 import { defineConfig, loadEnv } from 'vite';
+
+/* Every page of the site: its URL path and its HTML entry. The sitemap lists them all. */
+const pages = {
+  '/': 'index.html',
+  '/features/': 'features/index.html',
+  '/developers/': 'developers/index.html',
+};
 
 /* SEO build steps for this one-page static site:
    - robots.txt and sitemap.xml, built from VITE_SITE_URL (see .env)
@@ -39,7 +47,9 @@ function seo(siteUrl) {
         source:
           '<?xml version="1.0" encoding="UTF-8"?>\n' +
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-          `  <url>\n    <loc>${siteUrl}/</loc>\n    <lastmod>${today}</lastmod>\n  </url>\n` +
+          Object.keys(pages)
+            .map((path) => `  <url>\n    <loc>${siteUrl}${path}</loc>\n    <lastmod>${today}</lastmod>\n  </url>\n`)
+            .join('') +
           '</urlset>\n',
       });
     },
@@ -48,7 +58,7 @@ function seo(siteUrl) {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  const siteUrl = (env.VITE_SITE_URL || 'https://mewcms.com').replace(/\/+$/, '');
+  const siteUrl = (env.VITE_SITE_URL || 'https://www.mewcms.com').replace(/\/+$/, '');
   process.env.VITE_SITE_URL = siteUrl;
 
   return {
@@ -59,7 +69,12 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       outDir: 'dist',
-      sourcemap: true
+      sourcemap: true,
+      rollupOptions: {
+        input: Object.fromEntries(
+          Object.entries(pages).map(([path, file]) => [path === '/' ? 'main' : path.slice(1, -1), resolve(__dirname, file)]),
+        ),
+      },
     }
   };
 });

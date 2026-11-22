@@ -19,6 +19,7 @@ Developed as an open-source initiative by **[DeepSoft](https://deepsoft.lat)**.
 - A full-screen hero film (a white cat on a dark stage with purple neon) that ends on the slogan
 - Six chapters: multi-site and themes, the block editor, the AI writing assistant, languages, the admin, and security/SEO/performance
 - A grid of the smaller features and a short section for developers
+- Two inner pages with the same design: `/features/` (every feature in more depth) and `/developers/` (stack, install, themes, blocks and translations). Each is a folder with its own `index.html`, listed in `pages` in `vite.config.js`, which also feeds the sitemap
 
 ## Design notes
 
@@ -30,7 +31,7 @@ Developed as an open-source initiative by **[DeepSoft](https://deepsoft.lat)**.
 
 ## SEO
 
-- The public address lives in `.env` as `VITE_SITE_URL` (default `https://mewcms.com`, no trailing slash). The build uses it for the canonical URL, the Open Graph/Twitter tags, the JSON-LD and the generated `robots.txt` and `sitemap.xml`. Override it per deploy with an environment variable of the same name
+- The public address lives in `.env` as `VITE_SITE_URL` (default `https://www.mewcms.com`, no trailing slash). The build uses it for the canonical URL, the Open Graph/Twitter tags, the JSON-LD and the generated `robots.txt` and `sitemap.xml`. Override it per deploy with an environment variable of the same name
 - `index.html` carries the title, description, canonical, Open Graph and Twitter tags, and a JSON-LD graph (`Organization` for DeepSoft, `WebSite`, `SoftwareApplication` for MewCMS)
 - The share image is `public/assets/og/mewcms-og.jpg` (1200×630)
 - The build preloads the three fonts the first screen uses (Cormorant Garamond 300 and 300 italic, Jost 300)

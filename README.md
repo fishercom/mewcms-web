@@ -28,6 +28,13 @@ Developed as an open-source initiative by **[DeepSoft](https://deepsoft.lat)**.
 - The hero video (white cat, DeeVid AI export without watermark) lives in `public/assets/hero/` (`hero-cat.mp4` + `hero-poster.webp`/`.jpg`, the poster being the video's last frame). It loads after the page has painted
 - The logo is the MewCMS logo, copied from the CMS repo (`public/brand/`): `public/assets/brand/lockup-dark.svg` (header and footer, dark background), `lockup-light.svg` (for light backgrounds), `mark.svg` / `mark-dark.svg` (icon only), plus `public/favicon.svg` and `public/apple-touch-icon.png`. The wordmark is outlined, so no font is needed.
 
+## SEO
+
+- The public address lives in `.env` as `VITE_SITE_URL` (default `https://mewcms.com`, no trailing slash). The build uses it for the canonical URL, the Open Graph/Twitter tags, the JSON-LD and the generated `robots.txt` and `sitemap.xml`. Override it per deploy with an environment variable of the same name
+- `index.html` carries the title, description, canonical, Open Graph and Twitter tags, and a JSON-LD graph (`Organization` for DeepSoft, `WebSite`, `SoftwareApplication` for MewCMS)
+- The share image is `public/assets/og/mewcms-og.jpg` (1200×630)
+- The build preloads the three fonts the first screen uses (Cormorant Garamond 300 and 300 italic, Jost 300)
+
 ---
 
 ## Local development

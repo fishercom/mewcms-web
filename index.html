@@ -3,18 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MewCMS · Elegance, built in.</title>
-  <meta name="description" content="MewCMS is an open-source content system for teams who run many sites in many languages: themes, a block editor, an AI writing assistant and a calm admin, built on Laravel, Inertia and React.">
+  <title>MewCMS · Open-source multi-site CMS for Laravel &amp; React</title>
+  <meta name="description" content="MewCMS is a free, open-source CMS for teams who run many sites in many languages: themes, a block editor, an AI writing assistant and a calm admin.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="%VITE_SITE_URL%/">
   <meta name="theme-color" content="#0B0910">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="preload" as="image" href="/assets/hero/hero-poster.webp" type="image/webp">
+  <link rel="preload" as="image" href="/assets/hero/hero-poster.webp" type="image/webp" fetchpriority="high">
 
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MewCMS">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="%VITE_SITE_URL%/">
   <meta property="og:title" content="MewCMS · Elegance, built in.">
   <meta property="og:description" content="An open-source content system for teams who run many sites, in many languages, with quiet confidence.">
-  <meta property="og:image" content="/assets/hero/hero-poster.jpg">
+  <meta property="og:image" content="%VITE_SITE_URL%/assets/og/mewcms-og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The MewCMS logo and the slogan “Elegance, built in.” beside a white cat on a dark stage with purple neon">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MewCMS · Elegance, built in.">
+  <meta name="twitter:description" content="An open-source content system for teams who run many sites, in many languages, with quiet confidence.">
+  <meta name="twitter:image" content="%VITE_SITE_URL%/assets/og/mewcms-og.jpg">
+  <meta name="twitter:image:alt" content="The MewCMS logo and the slogan “Elegance, built in.” beside a white cat on a dark stage with purple neon">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://deepsoft.lat/#organization",
+        "name": "DeepSoft",
+        "url": "https://deepsoft.lat"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "%VITE_SITE_URL%/#website",
+        "url": "%VITE_SITE_URL%/",
+        "name": "MewCMS",
+        "description": "The website of MewCMS, an open-source CMS for many sites in many languages.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://deepsoft.lat/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "%VITE_SITE_URL%/#software",
+        "name": "MewCMS",
+        "url": "%VITE_SITE_URL%/",
+        "description": "An open-source content management system for teams who run many sites in many languages, with themes, a block editor, an AI writing assistant, roles, redirects and sitemaps. Built on Laravel, Inertia and React.",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Content management system",
+        "operatingSystem": "Linux, macOS, Windows",
+        "image": "%VITE_SITE_URL%/assets/og/mewcms-og.jpg",
+        "screenshot": [
+          "%VITE_SITE_URL%/assets/shots/sites.webp",
+          "%VITE_SITE_URL%/assets/shots/blocks.webp",
+          "%VITE_SITE_URL%/assets/shots/dashboard.webp"
+        ],
+        "featureList": [
+          "Many sites from one admin, each with its own domain, languages and theme",
+          "Block editor with reusable patterns and live theme preview",
+          "AI writing assistant for outlines, drafts and SEO metadata",
+          "Languages per site, menus per language and assisted translation",
+          "Roles, permissions, activity log, revisions and scheduled publishing",
+          "Sitemaps, redirects, an SEO review per page and cached public pages"
+        ],
+        "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@id": "https://deepsoft.lat/#organization" },
+        "sameAs": ["https://github.com/fishercom/mewcms"]
+      }
+    ]
+  }
+  </script>
 
   <script>document.documentElement.classList.add('js');</script>
 </head>

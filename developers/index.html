@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developers · MewCMS, a Laravel, Inertia and React CMS</title>
+  <meta name="description" content="Install MewCMS, a Laravel 12, Inertia and React 19 CMS, and build themes and blocks as plain folders of TypeScript, CSS and JSON that you can read and version.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="%VITE_SITE_URL%/developers/">
+  <meta name="theme-color" content="#0B0910">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MewCMS">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="%VITE_SITE_URL%/developers/">
+  <meta property="og:title" content="Developers · MewCMS">
+  <meta property="og:description" content="A Laravel, Inertia and React CMS with no plugin maze: themes and blocks are folders you can read, test and version.">
+  <meta property="og:image" content="%VITE_SITE_URL%/assets/og/mewcms-og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The MewCMS logo and the slogan “Elegance, built in.” beside a white cat on a dark stage with purple neon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Developers · MewCMS">
+  <meta name="twitter:description" content="A Laravel, Inertia and React CMS with no plugin maze: themes and blocks are folders you can read, test and version.">
+  <meta name="twitter:image" content="%VITE_SITE_URL%/assets/og/mewcms-og.jpg">
+  <meta name="twitter:image:alt" content="The MewCMS logo and the slogan “Elegance, built in.” beside a white cat on a dark stage with purple neon">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "%VITE_SITE_URL%/developers/#webpage",
+        "url": "%VITE_SITE_URL%/developers/",
+        "name": "Developers · MewCMS",
+        "description": "How to install MewCMS and build themes and blocks for it.",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "%VITE_SITE_URL%/#website" },
+        "about": { "@id": "%VITE_SITE_URL%/#software" },
+        "breadcrumb": { "@id": "%VITE_SITE_URL%/developers/#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "%VITE_SITE_URL%/developers/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "MewCMS", "item": "%VITE_SITE_URL%/" },
+          { "@type": "ListItem", "position": 2, "name": "Developers", "item": "%VITE_SITE_URL%/developers/" }
+        ]
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "%VITE_SITE_URL%/developers/#source",
+        "name": "MewCMS",
+        "codeRepository": "https://github.com/fishercom/mewcms",
+        "programmingLanguage": ["PHP", "TypeScript"],
+        "runtimePlatform": "PHP 8.3, Node.js 20",
+        "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+        "targetProduct": { "@id": "%VITE_SITE_URL%/#software" }
+      }
+    ]
+  }
+  </script>
+
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header solid" id="top">
+    <div class="wrap header-row">
+      <a class="logo" href="/" aria-label="MewCMS home">
+        <img src="/assets/brand/lockup-dark.svg" width="137" height="34" alt="MewCMS">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="/features/">Features</a>
+        <a href="/developers/" aria-current="page">Developers</a>
+        <a href="https://mewcms.onrender.com" target="_blank" rel="noopener">Live demo</a>
+        <a href="https://github.com/fishercom/mewcms" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow rv">MewCMS for developers</p>
+        <h1 class="rv" style="--i:1">A Laravel CMS <em>you can read.</em></h1>
+        <p class="lede rv" style="--i:2">MewCMS is a Laravel application with an Inertia and React admin. Themes and blocks are folders of TypeScript, CSS and JSON, so you can read, test and version them like the rest of your code.</p>
+      </div>
+    </section>
+
+    <section class="block more" id="stack">
+      <div class="wrap">
+        <h2 class="rv">The stack.</h2>
+        <div class="grid">
+          <div class="rv" style="--i:0"><h3>Laravel 12</h3><p>Routing, security and persistence, on PHP 8.3 or newer.</p></div>
+          <div class="rv" style="--i:1"><h3>Inertia 2</h3><p>Server-driven pages with SPA navigation and no separate API to maintain.</p></div>
+          <div class="rv" style="--i:2"><h3>React 19</h3><p>The admin, the block editor and every theme page.</p></div>
+          <div class="rv" style="--i:3"><h3>TypeScript</h3><p>Typed props for pages, blocks and the data the CMS sends them.</p></div>
+          <div class="rv" style="--i:4"><h3>Tailwind CSS 4</h3><p>Design tokens the themes extend with their own colours and fonts.</p></div>
+          <div class="rv" style="--i:5"><h3>Your database</h3><p>SQLite to start, MySQL 8 or PostgreSQL in production.</p></div>
+          <div class="rv" style="--i:6"><h3>Vite</h3><p>One build for the admin and every theme, each in its own chunks.</p></div>
+          <div class="rv" style="--i:7"><h3>AGPL v3</h3><p>Free software. Change it, run it, and share what you change.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="install">
+      <div class="wrap stack">
+        <div class="stack-text">
+          <h2 class="rv">Run it on your machine.</h2>
+          <p class="rv" style="--i:1">You need PHP 8.3 or newer, Composer, and Node.js 20 or newer. SQLite is enough to start. The seeder creates the languages, a default site, the profiles and an administrator, and the default theme can load a starting home page, menus and a contact form.</p>
+          <a class="btn rv" style="--i:2" href="https://github.com/fishercom/mewcms#-quick-start--installation" target="_blank" rel="noopener">Full install guide</a>
+        </div>
+        <div class="code-pair rv" style="--i:1">
+          <pre class="code"><span class="c"># Get the code and its dependencies</span>
+git clone https://github.com/fishercom/mewcms.git
+<span class="k">cd</span> mewcms
+composer install
+npm install
+
+<span class="c"># Configure, create the database and seed it</span>
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate --seed
+php artisan cms:content-import default
+php artisan storage:link
+
+<span class="c"># Start Laravel and Vite together</span>
+composer dev</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="themes">
+      <div class="wrap stack">
+        <div class="stack-text">
+          <h2 class="rv">A theme is a folder.</h2>
+          <p class="rv" style="--i:1">Each site picks a theme in the admin. A theme holds its stylesheet, assets, fixed texts per language, optional starting content and the pages it wants to change. Any page it leaves out comes from the default theme, so a theme with no pages at all simply restyles the default ones.</p>
+          <p class="rv" style="--i:2">Themes can live in their own repositories: link the folder into <code>resources/themes</code> before you build, and the CMS repository stays clean.</p>
+          <a class="btn rv" style="--i:3" href="https://github.com/fishercom/mewcms/blob/main/resources/themes/README.md" target="_blank" rel="noopener">Read the theme guide</a>
+        </div>
+        <div class="code-pair rv" style="--i:1">
+          <pre class="code"><span class="c">resources/themes/&lt;slug&gt;/</span>
+├── <span class="s">theme.json</span>       name, version, author
+├── <span class="s">screenshot.png</span>   preview in Admin → Sites
+├── <span class="s">css/theme.css</span>    the theme's stylesheet
+├── <span class="s">assets/</span>          images and fonts
+├── <span class="s">lang/</span>            en.json, es.json, ...
+├── <span class="s">blocks/</span>          the theme's own blocks
+├── <span class="s">content/</span>         optional starting content
+└── <span class="s">front/</span>           pages, named like the Inertia components
+    ├── layout.tsx
+    └── templates/home.tsx, page.tsx, post.tsx</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="blocks">
+      <div class="wrap stack">
+        <div class="stack-text">
+          <h2 class="rv">A block is JSON plus a component.</h2>
+          <p class="rv" style="--i:1">The JSON file declares the block’s fields, which the page editor turns into a form. The React component renders it on the public site and in the editor preview. Fields can be text, rich text, images, video, numbers, repeaters, a slider or a list of posts.</p>
+          <p class="rv" style="--i:2">A theme can also restyle one of the CMS’s own blocks by adding a component with the same name.</p>
+        </div>
+        <div class="code-pair rv" style="--i:1">
+          <pre class="code"><span class="c">// blocks/testimonial.json</span>
+{
+  <span class="s">"name"</span>: <span class="s">"Testimonial"</span>,
+  <span class="s">"icon"</span>: <span class="s">"quote"</span>,
+  <span class="s">"fields"</span>: [
+    { <span class="s">"key"</span>: <span class="s">"quote"</span>, <span class="s">"type"</span>: <span class="s">"textarea"</span> },
+    { <span class="s">"key"</span>: <span class="s">"author"</span>, <span class="s">"type"</span>: <span class="s">"text"</span> }
+  ]
+}</pre>
+          <pre class="code"><span class="c">// front/blocks/testimonial.tsx</span>
+<span class="k">import</span> { type BlockRenderProps } <span class="k">from</span> <span class="s">'@/blocks/types'</span>;
+
+<span class="k">export default function</span> Testimonial({ data }: BlockRenderProps) {
+  <span class="k">return</span> (
+    &lt;blockquote&gt;
+      {data.quote}
+      &lt;cite&gt;{data.author}&lt;/cite&gt;
+    &lt;/blockquote&gt;
+  );
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="translations">
+      <div class="wrap stack">
+        <div class="stack-text">
+          <h2 class="rv">Texts that translate themselves.</h2>
+          <p class="rv" style="--i:1">Theme pages write keys, not words. The theme ships each key in every language it supports, and each site can change any of them from the admin without touching the code. Prices, dates and plurals are formatted for the page’s language.</p>
+          <p class="rv" style="--i:2"><code>php artisan cms:theme-texts</code> lists every key that is missing a translation, and the test suite runs it on every theme.</p>
+        </div>
+        <div class="code-pair rv" style="--i:1">
+          <pre class="code"><span class="k">import</span> { useTexts } <span class="k">from</span> <span class="s">'@/lib/theme-texts'</span>;
+
+<span class="k">const</span> { t, choice, price } = useTexts();
+
+&lt;h2&gt;{t(<span class="s">'footer.explore'</span>)}&lt;/h2&gt;
+&lt;p&gt;{choice(<span class="s">'search.results'</span>, results.length, { query })}&lt;/p&gt;
+&lt;span&gt;{t(<span class="s">'shop.from_price'</span>, { price: price(card.price) })}&lt;/span&gt;</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="block final">
+      <div class="wrap">
+        <img class="final-mark rv" src="/assets/brand/mark-dark.svg" width="72" height="72" alt="">
+        <h2 class="rv" style="--i:1">Read the code, <em>then build.</em></h2>
+        <p class="rv" style="--i:2">Everything is on GitHub under the AGPL v3, from the admin to the default theme.</p>
+        <div class="ctas rv" style="--i:3">
+          <a class="btn btn-primary" href="https://github.com/fishercom/mewcms" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="btn" href="/features/">See all features</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span class="footer-brand"><a href="/" aria-label="MewCMS home"><img src="/assets/brand/lockup-dark.svg" width="81" height="20" alt="MewCMS"></a> · <a href="https://github.com/fishercom/mewcms/blob/main/LICENSE" target="_blank" rel="noopener">AGPL-3.0 License</a></span>
+      <nav class="footer-nav" aria-label="Footer"><a href="/features/">Features</a><a href="/developers/">Developers</a></nav>
+      <span>WebSite developed by <a href="https://deepsoft.lat" target="_blank" rel="noopener">deepsoft</a></span>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

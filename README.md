@@ -19,6 +19,7 @@ Developed as an open-source initiative by **[DeepSoft](https://deepsoft.lat)**.
 - A full-screen hero film (a white cat on a dark stage with purple neon) that ends on the slogan
 - Six chapters: multi-site and themes, the block editor, the AI writing assistant, languages, the admin, and security/SEO/performance
 - A grid of the smaller features and a short section for developers
+- Two inner pages with the same design: `/features/` (every feature in more depth) and `/developers/` (stack, install, themes, blocks and translations). Each is a folder with its own `index.html`, listed in `pages` in `vite.config.js`, which also feeds the sitemap
 
 ## Design notes
 

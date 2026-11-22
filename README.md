@@ -30,7 +30,7 @@ Developed as an open-source initiative by **[DeepSoft](https://deepsoft.lat)**.
 
 ## SEO
 
-- The public address lives in `.env` as `VITE_SITE_URL` (default `https://mewcms.com`, no trailing slash). The build uses it for the canonical URL, the Open Graph/Twitter tags, the JSON-LD and the generated `robots.txt` and `sitemap.xml`. Override it per deploy with an environment variable of the same name
+- The public address lives in `.env` as `VITE_SITE_URL` (default `https://www.mewcms.com`, no trailing slash). The build uses it for the canonical URL, the Open Graph/Twitter tags, the JSON-LD and the generated `robots.txt` and `sitemap.xml`. Override it per deploy with an environment variable of the same name
 - `index.html` carries the title, description, canonical, Open Graph and Twitter tags, and a JSON-LD graph (`Organization` for DeepSoft, `WebSite`, `SoftwareApplication` for MewCMS)
 - The share image is `public/assets/og/mewcms-og.jpg` (1200×630)
 - The build preloads the three fonts the first screen uses (Cormorant Garamond 300 and 300 italic, Jost 300)

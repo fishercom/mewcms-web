@@ -48,7 +48,7 @@ function seo(siteUrl) {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  const siteUrl = (env.VITE_SITE_URL || 'https://mewcms.com').replace(/\/+$/, '');
+  const siteUrl = (env.VITE_SITE_URL || 'https://www.mewcms.com').replace(/\/+$/, '');
   process.env.VITE_SITE_URL = siteUrl;
 
   return {

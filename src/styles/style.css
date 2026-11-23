@@ -72,7 +72,8 @@ a { color: inherit; }
   background: var(--neon); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease);
 }
 .nav a:hover { color: var(--fg); }
-.nav a:hover::after { transform: scaleX(1); }
+.nav a:hover::after, .nav a[aria-current]::after { transform: scaleX(1); }
+.nav a[aria-current] { color: var(--fg); }
 
 /* Buttons */
 .btn {
@@ -120,6 +121,14 @@ a { color: inherit; }
 .hero.revealed .lede { transition-delay: 1.1s; }
 .hero.revealed .ctas { transition-delay: 1.35s; }
 .hero.revealed .scroll-cue { transition-delay: 1.8s; }
+
+/* Inner pages (/features/, /developers/): a quiet title block under the fixed header */
+.page-head { padding: calc(72px + clamp(72px, 10vw, 128px)) 0 0; }
+.page-head h1 { max-width: 16ch; margin: 0 0 26px; font: 300 clamp(48px, 7vw, 96px)/1 var(--serif); letter-spacing: -.01em; text-wrap: balance; }
+.page-head h1 em { font-style: italic; color: var(--lavender); text-shadow: 0 0 30px rgba(183, 108, 255, .45); }
+.page-head .lede { max-width: 560px; margin: 0; }
+.page-head + .block { padding-top: clamp(72px, 10vw, 120px); }
+main p code { font: 400 .88em var(--mono); color: var(--lavender); }
 
 /* Sections */
 .block { padding-block: clamp(96px, 14vw, 168px); }
@@ -188,6 +197,7 @@ a { color: inherit; }
 .footer-brand { display: inline-flex; align-items: center; gap: 8px; }
 .footer-brand img { display: block; width: auto; height: 20px; }
 .site-footer a { text-decoration-color: var(--line); text-underline-offset: 4px; }
+.footer-nav { display: flex; gap: 24px; }
 .site-footer a:hover { color: var(--fg); text-decoration-color: var(--neon); }
 
 /* Scroll reveal: only what starts below the fold is hidden, so the first frame is complete */

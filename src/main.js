@@ -9,10 +9,10 @@ import './styles/style.css';
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const hero = document.getElementById('hero');
 const header = document.querySelector('.site-header');
-const video = hero.querySelector('.hero-video');
+const video = hero && hero.querySelector('.hero-video');
 
 /* Header turns translucent once the hero has scrolled away */
-if ('IntersectionObserver' in window) {
+if (hero && 'IntersectionObserver' in window) {
   new IntersectionObserver(([entry]) => {
     header.classList.toggle('solid', !entry.isIntersecting);
   }, { rootMargin: '-80px 0px 0px 0px' }).observe(hero);
@@ -40,8 +40,10 @@ function startHero() {
   fallback = setTimeout(reveal, 9000);
 }
 
-if (document.readyState === 'complete') startHero();
-else window.addEventListener('load', startHero, { once: true });
+if (hero) {
+  if (document.readyState === 'complete') startHero();
+  else window.addEventListener('load', startHero, { once: true });
+}
 
 /* Scroll reveal: blocks fade and rise in once, with a small stagger */
 if (!reduceMotion && 'IntersectionObserver' in window) {
